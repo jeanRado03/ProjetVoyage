@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listes Activites</title>
+</head>
+<body>
+<h2>Liste des activites</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Bouquet</th>
+        <th>Activite</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${activitelist.empty}">
+        <td colspan="3">Aucun employée en base de données</td>
+    </tr>
+    <tr th:each="activitebouquet: ${activitelist}">
+        <td><span th:text="${activitebouquet.bouquet.nomBouquet}">Bouquet</span></td>
+        <td><span th:text="${activitebouquet.activite.activite}">Activite</span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

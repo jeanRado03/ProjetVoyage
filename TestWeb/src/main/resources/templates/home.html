@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" th:action="@{/saveEmployee}" th:object="${employee}">
+        <input type="text" placeholder="Votre Nom" th:field="*{nom}"/><br/>
+        <input type="text" placeholder="Votre Prenom" th:field="*{prenom}"/><br/>
+        <input type="email" placeholder="E-Mail" th:field="*{email}"/><br/>
+        <input type="password" placeholder="mot de passe" th:field="*{password}"/><br/>
+        <input type="submit" value="Connexion"/>
+    </form>
+    <a href="/employees">Liste des Employees</a>
+</body>
+</html>
